@@ -1,0 +1,41 @@
+{
+  "n_samples": 761,
+  "acc_clean": 85.02,
+  "U": 1020,
+  "neff": {
+    "p05": 58.494686126708984,
+    "median": 87.0481185913086,
+    "p95": 87.0481185913086
+  },
+  "frac_neff_eq_1": 0.0,
+  "frac_neff_ge_half_U": 0.0,
+  "pad_mass_max": 0.0,
+  "equiv_err_median": 1.590643492477284e-07,
+  "equiv_err_p95": 1.0943837537524826e-06,
+  "translation": {
+    "1.0": {
+      "valid_only": {
+        "acc": 85.02,
+        "flip_rate": 0.0
+      },
+      "all_points": {
+        "acc": 32.46,
+        "flip_rate": 66.1
+      }
+    },
+    "2.0": {
+      "valid_only": {
+        "acc": 85.02,
+        "flip_rate": 0.0
+      },
+      "all_points": {
+        "acc": 32.46,
+        "flip_rate": 66.1
+      }
+    }
+  },
+  "permutation": {
+    "acc": 59.09,
+    "flip_rate": 36.27
+  }
+}

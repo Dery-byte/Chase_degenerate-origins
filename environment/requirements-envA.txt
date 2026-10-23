@@ -1,0 +1,11 @@
+# Environment A: Kaggle default GPU image (October 2026), Python 3.10/3.11, PyTorch 2.x + CUDA, 2x NVIDIA T4.
+# All E1-E6 experiments. Exact torch version: printed by the first cell of each notebook.
+torch>=2.0
+numpy
+scipy
+pandas
+pyyaml
+dotmap
+einops
+tqdm
+matplotlib

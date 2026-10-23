@@ -1,0 +1,101 @@
+base_lr: 0.1
+batch_size: 256
+cuda_visible_device: 0,1
+device:
+- 0
+- 1
+feeder: feeders.feeder_cad.Collective
+loss: LSCE_AUX_GROUP
+loss_args:
+  smoothing: 0.1
+  temperature: 1.0
+lr_decay_rate: 0.1
+model: model.CTRGCN.ctrgcn.Model_GROUP
+model_args:
+  graph: model.CTRGCN.graph.cad.Graph
+  graph_args:
+    labeling_mode: spatial
+  in_channels: 2
+  num_class: 4
+  num_class_person: 5
+  num_person: 6
+  num_point: 17
+nesterov: true
+num_epoch: 55
+num_worker: 4
+optimizer: SGD
+run_mode: train
+seed: 1
+step:
+- 25
+- 45
+test_batch_size: 128
+test_feeder_args:
+  G: 2
+  J: 17
+  N: 6
+  T: 10
+  dataset_dir: data/collective
+  dataset_name: collective
+  debug: false
+  frame_end_idx: 10
+  frame_sampling: 1
+  frame_start_idx: 0
+  image_h: 480
+  image_w: 800
+  joints_folder_name: joints
+  num_classes: 4
+  num_person_action_classes: 5
+  person_action_label_file_name: tracks_normalized_with_person_action_label.pkl
+  print_cls_idx: true
+  split: test
+  tracklets_file_name: tracks_normalized.pkl
+train_feeder_args:
+  G: 2
+  J: 17
+  N: 6
+  T: 10
+  agent_dropout_augment: true
+  dataset_dir: data/collective
+  dataset_name: collective
+  debug: false
+  frame_end_idx: 10
+  frame_sampling: 1
+  frame_start_idx: 0
+  horizontal_flip_augment: true
+  horizontal_flip_augment_purturb: true
+  horizontal_move_augment: true
+  horizontal_move_augment_purturb: true
+  image_h: 480
+  image_w: 800
+  joints_folder_name: joints
+  num_classes: 4
+  num_person_action_classes: 5
+  person_action_label_file_name: tracks_normalized_with_person_action_label.pkl
+  print_cls_idx: true
+  recollect_stats_train: true
+  split: train
+  tracklets_file_name: tracks_normalized.pkl
+  vertical_move_augment: true
+  vertical_move_augment_purturb: true
+warm_up_epoch: 5
+weight_decay: 0.0004
+work_dir: ./exp/ctr/cad_chase
+wrapper: model.Wrapper.chase_plus_repo.CHASEPlusRepo
+wrapper_args:
+  c1: 64
+  c2: 8
+  centred: true
+  eps: 681.9500732421875
+  hierarchical: true
+  in_channels: 2
+  kappa_hi: 255.0
+  kappa_lo: 10.0
+  lam_rbr: 1.0
+  lam_sd: 0.1
+  masked: true
+  num_entity: 6
+  num_frame: 10
+  num_point: 17
+  sd_pairs: 4
+  sd_points: 8

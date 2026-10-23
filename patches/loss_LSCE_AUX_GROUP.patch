@@ -1,0 +1,31 @@
+diff --git a/NeurIPS24/utils/loss.py b/NeurIPS24/utils/loss.py
+index 2433465..e4a642f 100644
+--- a/NeurIPS24/utils/loss.py
++++ b/NeurIPS24/utils/loss.py
+@@ -298,4 +298,24 @@ class InfoGCN_Loss_MBMMD_GROUP(nn.Module):
+ 
+         Np, Mp, Cp = x_tuple[2].size()
+ 
+-        return self.weights[0] * (self.LSCE(x_tuple[0], target) + self.LSCE(x_tuple[2].view(Np*Mp, Cp), target_person.view(Np*Mp)) ) + self.weights[1] * info_mmd_loss + self.weights[2] * l2_z_mean + self.weights[-1] * mpmmd
+\ No newline at end of file
++        return self.weights[0] * (self.LSCE(x_tuple[0], target) + self.LSCE(x_tuple[2].view(Np*Mp, Cp), target_person.view(Np*Mp)) ) + self.weights[1] * info_mmd_loss + self.weights[2] * l2_z_mean + self.weights[-1] * mpmmd
++
++class LSCE_AUX_GROUP(nn.Module):
++    def __init__(self, LSCE):
++        super().__init__()
++        self.LSCE = LSCE
++
++    def forward(self, x, target, target_person):
++        N, M, C = x[1].size()
++        return (self.LSCE(x[0], target) + self.LSCE(x[1].reshape(N * M, C), target_person.view(N * M))
++                + x[-1].mean())
++
++
++_get_loss_func_orig = get_loss_func
++
++
++def get_loss_func(loss_func, loss_args):
++    if loss_func == 'LSCE_AUX_GROUP':
++        return LSCE_AUX_GROUP(LabelSmoothingCrossEntropy(smoothing=loss_args['smoothing'],
++                                                         temperature=loss_args['temperature']))
++    return _get_loss_func_orig(loss_func, loss_args)

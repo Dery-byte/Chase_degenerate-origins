@@ -1,0 +1,5 @@
+model,acc_clean,neff,selected_frame,selected_joint,selected_slot,origin_on_padding_pct,transl_sigma1_valid_only_acc,transl_sigma1_valid_only_flips,perm_full_flips
+released,89.88,1.0,3,4,0,0.92,84.89,10.12,42.62
+cad_chase_s1,68.73,1.0,2,0,0,0.66,66.62,8.67,49.01
+cad_chase_s2,64.13,1.0,2,14,4,61.76,49.54,35.61,59.79
+cad_chase_s3,82.39,1.0,9,12,0,4.20,81.73,8.67,52.87

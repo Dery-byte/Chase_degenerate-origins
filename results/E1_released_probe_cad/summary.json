@@ -1,0 +1,109 @@
+{
+  "config": "cad_probe.yaml",
+  "weights": "cad_chas.pt",
+  "n_samples": 765,
+  "U": 1020,
+  "acc_clean": 89.41176470588235,
+  "exp1": {
+    "neff": {
+      "p05": 1.0,
+      "p25": 1.0,
+      "median": 1.0,
+      "p75": 1.0,
+      "p95": 1.0
+    },
+    "neff_over_Uvalid": {
+      "p05": 0.000980392156862745,
+      "p25": 0.001176470588235294,
+      "median": 0.0014705882352941176,
+      "p75": 0.00196078431372549,
+      "p95": 0.0029411764705882353
+    },
+    "frac_saturated_neff_lt_10": 0.9947712418300654,
+    "frac_overdispersed_neff_gt_half_Uvalid": 0.00522875816993464,
+    "max_alpha": {
+      "p05": 1.0,
+      "p25": 1.0,
+      "median": 1.0,
+      "p75": 1.0,
+      "p95": 1.0
+    },
+    "pad_mass": {
+      "p05": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "p95": 3.465971621660858e-42
+    },
+    "frac_samples_with_padding": 0.857516339869281,
+    "pad_mass_mean_on_padded_samples": 0.01676829268292683,
+    "dist_to_s2com_over_s": {
+      "p05": 0.4451853334903717,
+      "p25": 0.7233837842941284,
+      "median": 0.9427183866500854,
+      "p75": 1.3356454372406006,
+      "p95": 1.5051398992538452
+    },
+    "pstar_between_sample_std_over_mean_s": [
+      1.0876974960067571,
+      0.2945518615637157
+    ]
+  },
+  "exp2_translation": {
+    "0.1": {
+      "acc": 88.36601307189542,
+      "flip_rate": 1.8300653594771241,
+      "equiv_err_median": 6.127240794739919e-07,
+      "equiv_err_p95": 3.000005517606041e-06,
+      "input_change_valid_mean": NaN,
+      "input_change_padding_mean": 0.10311619347034424
+    },
+    "0.5": {
+      "acc": 86.01307189542484,
+      "flip_rate": 6.143790849673203,
+      "equiv_err_median": 1.226436125989494e-07,
+      "equiv_err_p95": 6.970720278332007e-07,
+      "input_change_valid_mean": NaN,
+      "input_change_padding_mean": 0.5090267054700092
+    },
+    "1.0": {
+      "acc": 84.9673202614379,
+      "flip_rate": 8.366013071895425,
+      "equiv_err_median": 7.56393632173058e-08,
+      "equiv_err_p95": 3.9141871752690293e-07,
+      "input_change_valid_mean": NaN,
+      "input_change_padding_mean": 1.040086829577104
+    },
+    "2.0": {
+      "acc": 78.30065359477125,
+      "flip_rate": 16.209150326797385,
+      "equiv_err_median": 4.954424426273363e-08,
+      "equiv_err_p95": 0.006900060549378274,
+      "input_change_valid_mean": NaN,
+      "input_change_padding_mean": 2.223830597979181
+    },
+    "5.0": {
+      "acc": 65.359477124183,
+      "flip_rate": 31.895424836601308,
+      "equiv_err_median": 2.748543614927712e-08,
+      "equiv_err_p95": 0.3656067192554471,
+      "input_change_valid_mean": NaN,
+      "input_change_padding_mean": 5.178323046270238
+    }
+  },
+  "exp2_permutation": {
+    "acc": 56.25272331154684,
+    "flip_rate": 42.39651416122005,
+    "dpstar_over_s": {
+      "p05": 0.0,
+      "p25": 1.1818395256996155,
+      "median": 2.0736682415008545,
+      "p75": 3.1859307289123535,
+      "p95": 7.108829927444414
+    }
+  },
+  "notes": [
+    "CHASE+ predicts equiv_err = 0, input_change = 0 and flip_rate = 0 for translation; hierarchical CHASE+ predicts dpstar = 0 and flip_rate = 0 for permutation.",
+    "input_change_padding > 0 even for an exactly equivariant p*: zero padding becomes -p* in the released wrapper (G3); read equiv_err for the CLB itself."
+  ]
+}

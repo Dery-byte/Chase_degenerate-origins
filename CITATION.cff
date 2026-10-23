@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "Does the Adaptive Shift Adapt? Degenerate Origins in Convex-Hull Normalisation for Skeleton-Based Multi-Entity Action Recognition"
+authors:
+  - family-names: Emmanuel
+    given-names: Derry
+    affiliation: "University of Cape Coast, Ghana"
+type: software
+license: MIT
+repository-code: "[repository link]"

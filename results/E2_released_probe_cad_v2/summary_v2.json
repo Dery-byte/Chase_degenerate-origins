@@ -1,0 +1,97 @@
+{
+  "n_samples": 761,
+  "acc_clean": 89.88,
+  "A_selected_point": {
+    "frac_on_padding": 0.0092,
+    "frac_extreme_xy": 0.0026,
+    "joint_hist": [
+      0,
+      0,
+      0,
+      0,
+      761,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "frame_hist": [
+      0,
+      0,
+      0,
+      761,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "slot_hist": [
+      761,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "B_translation": {
+    "0.5": {
+      "valid_only": {
+        "acc": 85.94,
+        "flip_rate": 5.65
+      },
+      "all_points": {
+        "acc": 89.88,
+        "flip_rate": 0.0
+      }
+    },
+    "1.0": {
+      "valid_only": {
+        "acc": 84.89,
+        "flip_rate": 10.12
+      },
+      "all_points": {
+        "acc": 89.22,
+        "flip_rate": 1.18
+      }
+    },
+    "2.0": {
+      "valid_only": {
+        "acc": 78.06,
+        "flip_rate": 15.9
+      },
+      "all_points": {
+        "acc": 89.22,
+        "flip_rate": 1.71
+      }
+    }
+  },
+  "C_permutation": {
+    "full": {
+      "acc": 56.55,
+      "flip_rate": 42.62
+    },
+    "backbone_only": {
+      "acc": 65.66,
+      "flip_rate": 32.63
+    },
+    "chase_only": {
+      "acc": 59.57,
+      "flip_rate": 38.24
+    }
+  },
+  "D_origin_s2com": {
+    "acc": 58.48,
+    "flip_rate": 38.76
+  }
+}

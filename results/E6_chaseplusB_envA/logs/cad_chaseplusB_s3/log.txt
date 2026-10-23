@@ -1,0 +1,170 @@
+[ 2026-10-16 10:37 ] Model load finished: model.CTRGCN.ctrgcn.Model_GROUP
+[ 2026-10-16 10:38 ] Data load finished
+[ 2026-10-16 10:38 ] Optimizer load finished: SGD
+[ 2026-10-16 10:38 ] base_lr: 0.1
+[ 2026-10-16 10:38 ] batch_size: 256
+[ 2026-10-16 10:38 ] config: cad_chaseplusB.yaml
+[ 2026-10-16 10:38 ] cuda_visible_device: 0,1
+[ 2026-10-16 10:38 ] device: [0, 1]
+[ 2026-10-16 10:38 ] eval_interval: 3
+[ 2026-10-16 10:38 ] feeder: feeders.feeder_cad.Collective
+[ 2026-10-16 10:38 ] ignore_weights: []
+[ 2026-10-16 10:38 ] loss: LSCE_AUX_GROUP
+[ 2026-10-16 10:38 ] loss_args: {'smoothing': 0.1, 'temperature': 1.0}
+[ 2026-10-16 10:38 ] lr_decay_rate: 0.1
+[ 2026-10-16 10:38 ] model: model.CTRGCN.ctrgcn.Model_GROUP
+[ 2026-10-16 10:38 ] model_args: {'graph': 'model.CTRGCN.graph.cad.Graph', 'graph_args': {'labeling_mode': 'spatial'}, 'in_channels': 2, 'num_class': 4, 'num_class_person': 5, 'num_person': 6, 'num_point': 17}
+[ 2026-10-16 10:38 ] nesterov: True
+[ 2026-10-16 10:38 ] num_epoch: 55
+[ 2026-10-16 10:38 ] num_worker: 4
+[ 2026-10-16 10:38 ] optimizer: SGD
+[ 2026-10-16 10:38 ] optimizer_betas: [0.9, 0.999]
+[ 2026-10-16 10:38 ] print_log: True
+[ 2026-10-16 10:38 ] run_mode: train
+[ 2026-10-16 10:38 ] save_epoch: 80
+[ 2026-10-16 10:38 ] save_score: False
+[ 2026-10-16 10:38 ] seed: 3
+[ 2026-10-16 10:38 ] show_topk: [1, 5]
+[ 2026-10-16 10:38 ] start_epoch: 0
+[ 2026-10-16 10:38 ] step: [25, 45]
+[ 2026-10-16 10:38 ] test_batch_size: 256
+[ 2026-10-16 10:38 ] test_feeder_args: {'G': 2, 'J': 17, 'N': 6, 'T': 10, 'dataset_dir': '/tmp/cad/collective', 'dataset_name': 'collective', 'debug': False, 'frame_end_idx': 10, 'frame_sampling': 1, 'frame_start_idx': 0, 'image_h': 480, 'image_w': 800, 'joints_folder_name': 'joints', 'num_classes': 4, 'num_person_action_classes': 5, 'person_action_label_file_name': 'tracks_normalized_with_person_action_label.pkl', 'print_cls_idx': True, 'split': 'test', 'tracklets_file_name': 'tracks_normalized.pkl'}
+[ 2026-10-16 10:38 ] train_feeder_args: {'G': 2, 'J': 17, 'N': 6, 'T': 10, 'agent_dropout_augment': True, 'dataset_dir': '/tmp/cad/collective', 'dataset_name': 'collective', 'debug': False, 'frame_end_idx': 10, 'frame_sampling': 1, 'frame_start_idx': 0, 'horizontal_flip_augment': True, 'horizontal_flip_augment_purturb': True, 'horizontal_move_augment': True, 'horizontal_move_augment_purturb': True, 'image_h': 480, 'image_w': 800, 'joints_folder_name': 'joints', 'num_classes': 4, 'num_person_action_classes': 5, 'person_action_label_file_name': 'tracks_normalized_with_person_action_label.pkl', 'print_cls_idx': True, 'recollect_stats_train': True, 'split': 'train', 'tracklets_file_name': 'tracks_normalized.pkl', 'vertical_move_augment': True, 'vertical_move_augment_purturb': True}
+[ 2026-10-16 10:38 ] warm_up_epoch: 5
+[ 2026-10-16 10:38 ] weight_decay: 0.0004
+[ 2026-10-16 10:38 ] weights: None
+[ 2026-10-16 10:38 ] work_dir: /kaggle/working/runs_plus/cad_chaseplusB_s3
+[ 2026-10-16 10:38 ] wrapper: model.Wrapper.chase_plus_repo.CHASEPlusRepo
+[ 2026-10-16 10:38 ] wrapper_args: {'c1': 64, 'c2': 8, 'centred': True, 'eps': 665.35791015625, 'hierarchical': True, 'in_channels': 2, 'kappa_floor': 8.0, 'kappa_hi': 255.0, 'kappa_lo': 10.0, 'lam_rbr': 1.0, 'lam_sd': 0.1, 'masked': True, 'num_entity': 6, 'num_frame': 10, 'num_point': 17, 'sd_pairs': 4, 'sd_points': 8}
+[ 2026-10-16 10:38 ] # Parameters: 1425418
+[ 2026-10-16 10:38 ] ###***************start training***************###
+[ 2026-10-16 10:38 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:40 ] training: epoch: 1, loss: 253.1550, top1: 46.02%, lr: 0.020000
+[ 2026-10-16 10:40 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:41 ] training: epoch: 2, loss: 255.0357, top1: 59.16%, lr: 0.040000
+[ 2026-10-16 10:41 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:43 ] training: epoch: 3, loss: 248.9100, top1: 72.89%, lr: 0.060000
+[ 2026-10-16 10:43 ] evaluating: CEloss: 1.4762, top1: 46.41%, best_acc: 46.41%
+[ 2026-10-16 10:43 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:44 ] training: epoch: 4, loss: 271.5528, top1: 77.67%, lr: 0.080000
+[ 2026-10-16 10:44 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:46 ] training: epoch: 5, loss: 254.1174, top1: 83.62%, lr: 0.100000
+[ 2026-10-16 10:46 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:48 ] training: epoch: 6, loss: 229.5713, top1: 88.66%, lr: 0.100000
+[ 2026-10-16 10:48 ] evaluating: CEloss: 1.0815, top1: 46.54%, best_acc: 46.54%
+[ 2026-10-16 10:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:49 ] training: epoch: 7, loss: 243.5432, top1: 91.02%, lr: 0.100000
+[ 2026-10-16 10:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:51 ] training: epoch: 8, loss: 253.2653, top1: 92.20%, lr: 0.100000
+[ 2026-10-16 10:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:52 ] training: epoch: 9, loss: 256.2938, top1: 93.75%, lr: 0.100000
+[ 2026-10-16 10:52 ] evaluating: CEloss: 1.0149, top1: 52.94%, best_acc: 52.94%
+[ 2026-10-16 10:52 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:54 ] training: epoch: 10, loss: 253.3831, top1: 95.39%, lr: 0.100000
+[ 2026-10-16 10:54 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:55 ] training: epoch: 11, loss: 264.7444, top1: 95.37%, lr: 0.100000
+[ 2026-10-16 10:55 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:57 ] training: epoch: 12, loss: 235.0736, top1: 95.94%, lr: 0.100000
+[ 2026-10-16 10:57 ] evaluating: CEloss: 0.9302, top1: 53.73%, best_acc: 53.73%
+[ 2026-10-16 10:57 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 10:58 ] training: epoch: 13, loss: 248.7133, top1: 96.53%, lr: 0.100000
+[ 2026-10-16 10:58 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:00 ] training: epoch: 14, loss: 235.0561, top1: 96.43%, lr: 0.100000
+[ 2026-10-16 11:00 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:02 ] training: epoch: 15, loss: 243.4244, top1: 96.90%, lr: 0.100000
+[ 2026-10-16 11:02 ] evaluating: CEloss: 0.7408, top1: 67.45%, best_acc: 67.45%
+[ 2026-10-16 11:02 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:03 ] training: epoch: 16, loss: 227.8541, top1: 97.32%, lr: 0.100000
+[ 2026-10-16 11:03 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:05 ] training: epoch: 17, loss: 244.0429, top1: 97.13%, lr: 0.100000
+[ 2026-10-16 11:05 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:06 ] training: epoch: 18, loss: 235.3872, top1: 97.50%, lr: 0.100000
+[ 2026-10-16 11:06 ] evaluating: CEloss: 0.9075, top1: 60.52%, best_acc: 67.45%
+[ 2026-10-16 11:06 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:08 ] training: epoch: 19, loss: 247.8551, top1: 97.68%, lr: 0.100000
+[ 2026-10-16 11:08 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:09 ] training: epoch: 20, loss: 277.6486, top1: 97.89%, lr: 0.100000
+[ 2026-10-16 11:09 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:11 ] training: epoch: 21, loss: 242.0279, top1: 98.22%, lr: 0.100000
+[ 2026-10-16 11:11 ] evaluating: CEloss: 0.6781, top1: 80.52%, best_acc: 80.52%
+[ 2026-10-16 11:11 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:12 ] training: epoch: 22, loss: 233.8285, top1: 97.91%, lr: 0.100000
+[ 2026-10-16 11:12 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:14 ] training: epoch: 23, loss: 248.6658, top1: 98.27%, lr: 0.100000
+[ 2026-10-16 11:14 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:16 ] training: epoch: 24, loss: 245.4120, top1: 98.51%, lr: 0.100000
+[ 2026-10-16 11:16 ] evaluating: CEloss: 0.7125, top1: 73.86%, best_acc: 80.52%
+[ 2026-10-16 11:16 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:17 ] training: epoch: 25, loss: 254.3427, top1: 98.35%, lr: 0.100000
+[ 2026-10-16 11:17 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:19 ] training: epoch: 26, loss: 240.2883, top1: 98.70%, lr: 0.010000
+[ 2026-10-16 11:19 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:20 ] training: epoch: 27, loss: 256.9619, top1: 98.90%, lr: 0.010000
+[ 2026-10-16 11:20 ] evaluating: CEloss: 0.6405, top1: 78.43%, best_acc: 80.52%
+[ 2026-10-16 11:20 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:22 ] training: epoch: 28, loss: 229.0236, top1: 98.92%, lr: 0.010000
+[ 2026-10-16 11:22 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:23 ] training: epoch: 29, loss: 238.7975, top1: 98.93%, lr: 0.010000
+[ 2026-10-16 11:23 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:25 ] training: epoch: 30, loss: 243.2574, top1: 98.95%, lr: 0.010000
+[ 2026-10-16 11:25 ] evaluating: CEloss: 0.6448, top1: 76.34%, best_acc: 80.52%
+[ 2026-10-16 11:25 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:27 ] training: epoch: 31, loss: 256.7824, top1: 98.94%, lr: 0.010000
+[ 2026-10-16 11:27 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:28 ] training: epoch: 32, loss: 261.0651, top1: 98.89%, lr: 0.010000
+[ 2026-10-16 11:28 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:30 ] training: epoch: 33, loss: 240.9245, top1: 98.97%, lr: 0.010000
+[ 2026-10-16 11:30 ] evaluating: CEloss: 0.6355, top1: 78.43%, best_acc: 80.52%
+[ 2026-10-16 11:30 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:31 ] training: epoch: 34, loss: 227.9258, top1: 98.86%, lr: 0.010000
+[ 2026-10-16 11:31 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:33 ] training: epoch: 35, loss: 230.6008, top1: 99.02%, lr: 0.010000
+[ 2026-10-16 11:33 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:34 ] training: epoch: 36, loss: 217.0315, top1: 99.00%, lr: 0.010000
+[ 2026-10-16 11:34 ] evaluating: CEloss: 0.6124, top1: 80.78%, best_acc: 80.78%
+[ 2026-10-16 11:34 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:36 ] training: epoch: 37, loss: 273.8831, top1: 99.02%, lr: 0.010000
+[ 2026-10-16 11:36 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:37 ] training: epoch: 38, loss: 246.0105, top1: 99.05%, lr: 0.010000
+[ 2026-10-16 11:37 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:39 ] training: epoch: 39, loss: 260.7661, top1: 99.03%, lr: 0.010000
+[ 2026-10-16 11:39 ] evaluating: CEloss: 0.6415, top1: 78.17%, best_acc: 80.78%
+[ 2026-10-16 11:39 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:41 ] training: epoch: 40, loss: 236.6069, top1: 98.97%, lr: 0.010000
+[ 2026-10-16 11:41 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:42 ] training: epoch: 41, loss: 237.9524, top1: 98.95%, lr: 0.010000
+[ 2026-10-16 11:42 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:44 ] training: epoch: 42, loss: 245.4763, top1: 99.10%, lr: 0.010000
+[ 2026-10-16 11:44 ] evaluating: CEloss: 0.6042, top1: 80.78%, best_acc: 80.78%
+[ 2026-10-16 11:44 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:45 ] training: epoch: 43, loss: 257.5240, top1: 99.03%, lr: 0.010000
+[ 2026-10-16 11:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:47 ] training: epoch: 44, loss: 244.0081, top1: 98.98%, lr: 0.010000
+[ 2026-10-16 11:47 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:48 ] training: epoch: 45, loss: 235.0709, top1: 99.06%, lr: 0.010000
+[ 2026-10-16 11:48 ] evaluating: CEloss: 0.6561, top1: 75.69%, best_acc: 80.78%
+[ 2026-10-16 11:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:50 ] training: epoch: 46, loss: 255.9095, top1: 99.08%, lr: 0.001000
+[ 2026-10-16 11:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:51 ] training: epoch: 47, loss: 222.0523, top1: 99.12%, lr: 0.001000
+[ 2026-10-16 11:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:53 ] training: epoch: 48, loss: 256.7794, top1: 99.03%, lr: 0.001000
+[ 2026-10-16 11:53 ] evaluating: CEloss: 0.6514, top1: 76.99%, best_acc: 80.78%
+[ 2026-10-16 11:53 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:55 ] training: epoch: 49, loss: 206.8821, top1: 99.06%, lr: 0.001000
+[ 2026-10-16 11:55 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:56 ] training: epoch: 50, loss: 232.9089, top1: 99.08%, lr: 0.001000
+[ 2026-10-16 11:56 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:58 ] training: epoch: 51, loss: 260.2038, top1: 99.07%, lr: 0.001000
+[ 2026-10-16 11:58 ] evaluating: CEloss: 0.6418, top1: 77.65%, best_acc: 80.78%
+[ 2026-10-16 11:58 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 11:59 ] training: epoch: 52, loss: 243.2047, top1: 99.07%, lr: 0.001000
+[ 2026-10-16 11:59 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 12:01 ] training: epoch: 53, loss: 254.9186, top1: 99.10%, lr: 0.001000
+[ 2026-10-16 12:01 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 12:02 ] training: epoch: 54, loss: 257.4641, top1: 99.10%, lr: 0.001000
+[ 2026-10-16 12:02 ] evaluating: CEloss: 0.6399, top1: 78.30%, best_acc: 80.78%
+[ 2026-10-16 12:02 ] adjust learning rate, using warm up, epoch: 5
+[ 2026-10-16 12:04 ] training: epoch: 55, loss: 232.9119, top1: 99.07%, lr: 0.001000
+[ 2026-10-16 12:04 ] Done.
+

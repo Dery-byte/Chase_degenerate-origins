@@ -1,0 +1,67 @@
+{
+  "runs": [
+    {
+      "arm": "fixed",
+      "seed": 1,
+      "best_acc": 73.33,
+      "last_acc": 70.98,
+      "minutes": 57.0
+    },
+    {
+      "arm": "chase",
+      "seed": 1,
+      "best_acc": 68.37,
+      "last_acc": 67.71,
+      "minutes": 57.5
+    },
+    {
+      "arm": "fixed",
+      "seed": 2,
+      "best_acc": 72.81,
+      "last_acc": 70.33,
+      "minutes": 57.5
+    },
+    {
+      "arm": "chase",
+      "seed": 2,
+      "best_acc": 63.79,
+      "last_acc": 55.03,
+      "minutes": 57.4
+    },
+    {
+      "arm": "fixed",
+      "seed": 3,
+      "best_acc": 78.3,
+      "last_acc": 76.08,
+      "minutes": 57.3
+    },
+    {
+      "arm": "chase",
+      "seed": 3,
+      "best_acc": 81.96,
+      "last_acc": 81.96,
+      "minutes": 57.8
+    },
+    {
+      "arm": "vanilla",
+      "seed": 1,
+      "best_acc": 58.43,
+      "last_acc": 57.25,
+      "minutes": 56.8
+    },
+    {
+      "arm": "vanilla",
+      "seed": 2,
+      "best_acc": 67.06,
+      "last_acc": 60.26,
+      "minutes": 57.1
+    },
+    {
+      "arm": "vanilla",
+      "seed": 3,
+      "best_acc": 66.54,
+      "last_acc": 65.1,
+      "minutes": 57.7
+    }
+  ]
+}

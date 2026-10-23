@@ -1,0 +1,46 @@
+class index:
+Walking: 0
+Waiting: 1
+Queueing: 2
+Talking: 3
+{
+  "n_samples": 761,
+  "acc_clean": 81.21,
+  "U": 1020,
+  "neff": {
+    "p05": 55.56808090209961,
+    "median": 76.31721496582031,
+    "p95": 76.31721496582031
+  },
+  "frac_neff_eq_1": 0.0,
+  "frac_neff_ge_half_U": 0.0,
+  "pad_mass_max": 0.0,
+  "equiv_err_median": 1.6398394109273795e-07,
+  "equiv_err_p95": 9.501019860636011e-07,
+  "translation": {
+    "1.0": {
+      "valid_only": {
+        "acc": 81.21,
+        "flip_rate": 0.0
+      },
+      "all_points": {
+        "acc": 48.75,
+        "flip_rate": 50.33
+      }
+    },
+    "2.0": {
+      "valid_only": {
+        "acc": 81.21,
+        "flip_rate": 0.0
+      },
+      "all_points": {
+        "acc": 48.75,
+        "flip_rate": 50.33
+      }
+    }
+  },
+  "permutation": {
+    "acc": 57.03,
+    "flip_rate": 36.27
+  }
+}

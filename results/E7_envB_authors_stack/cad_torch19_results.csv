@@ -1,0 +1,3 @@
+arm,seed,best_acc,last_acc,minutes,env
+chase,1,74.12,70.98,245.1,torch1.9
+fixed,1,79.74,72.42,247.8,torch1.9

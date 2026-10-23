@@ -1,0 +1,1 @@
+Incomplete run: stopped by the 12-hour Kaggle limit at epoch 48 of 55. Not reported in the paper; checkpoint not distributed.

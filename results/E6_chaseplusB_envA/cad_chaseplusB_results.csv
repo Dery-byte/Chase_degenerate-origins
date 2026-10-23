@@ -1,0 +1,7 @@
+arm,seed,best_acc,last_acc,minutes
+chaseplusB,1,69.8,61.96,87.0
+chaseplusB,2,73.33,72.94,86.6
+chaseplusB,3,80.78,78.3,86.6
+chaseplusB,4,85.75,80.52,86.6
+chaseplusB,5,84.58,82.09,86.5
+fixed,5,76.34,60.65,56.7
